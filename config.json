@@ -1,0 +1,39 @@
+{
+    "source": {
+        "alias": "nutcha-es-cluster-01",
+        "url": [""],
+        "port": 443,
+        "username": "",
+        "password": "",
+        "readTimeout": 55
+    },
+    "target": {
+        "url": [""],
+        "port": 443,
+        "username": "",
+        "password": "",
+        "timezoneDiff": false
+    },
+    "collector": {
+        "clusterHealth": {
+            "enabled": true,
+            "indexPrefix": "es_cluster_health"
+        },
+        "nodesStats": {
+            "enabled": true,
+            "indexPrefix": "es_nodes_stats"
+        },
+        "indicesStats": {
+            "enabled": true,
+            "indexPrefix": "es_indices_stats"
+        },
+        "indicesStatus": {
+            "enabled": true,
+            "indexPrefix": "es_indices_status"
+        },
+        "shardAllocation": {
+            "enabled": true,
+            "indexPrefix": "es_shard_allocation"
+        }
+    }
+}
